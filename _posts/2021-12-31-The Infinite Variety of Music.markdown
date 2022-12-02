@@ -7,9 +7,9 @@ author:     Chengrui
 header-img: img/brahms.jpg
 catalog: true
 tags:
-    - 数学物理方法
-    - 图像处理
-    - Matlab
+    - 古典乐
+    - 贝多芬
+    - 勃拉姆斯
 ---
 
 
