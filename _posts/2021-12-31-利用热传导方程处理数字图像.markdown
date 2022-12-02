@@ -4,7 +4,7 @@ title:      利用热传导方程处理数字图像
 subtitle:   利用Matlab和热传导方程的原理对图像做模糊或锐化处理
 date:       2021-12-31
 author:     Chengrui
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/rick_blur.jpg
 catalog: true
 tags:
     - 数学物理方法

@@ -4,7 +4,7 @@ title:      The Infinite Variety of Music
 subtitle:   Brahms and Beethoven
 date:       2021-12-31
 author:     Chengrui
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/brahms.jpg
 catalog: true
 tags:
     - 数学物理方法
