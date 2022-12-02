@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      对于特里福诺夫演奏的肖邦《F小调第二钢琴协奏曲》的赏析
-subtitle:   函数式编程框架 ReactiveCocoa 进阶
+subtitle:   可能是最浪漫的肖协二
 date:       2021-10-17
 author:     Chengrui
 header-img: img/post-bg-ios9-web.jpg
