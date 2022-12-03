@@ -137,7 +137,7 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 ##### 常见的可用数据集
 
 - **MNIST**: US Census Bureau 雇员的手写数字
-- **ImageNet**：来自搜索引擎的兆量级的图片
+- **ImageNet**：来自搜索引擎的百万量级的图片
 - **AudioSet**：YouTube上的声音片段
 - **Kinetics**：YouTube上人类活动的视频片段
 - **KITTI**：用于无人驾驶的交通情景的数据集
