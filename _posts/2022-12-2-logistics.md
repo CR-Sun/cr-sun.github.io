@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      斯坦福21秋：实用机器学习——学习笔记 0.课程简介
+title:      斯坦福21秋：实用机器学习——学习笔记（更新至0.课程简介）
 subtitle:   最好的机器学习课程之一
 date:       2022-12-2
 author:     Chengrui
@@ -47,7 +47,7 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 
 - 现在大量公司使用机器学习驱动最重要的应用设计（麦肯锡：近一半的公司在使用机器学习之后有了6%以上的收入增加）
 
-  ![image-20221202201947892](https://ibb.co/CnmT6Pw)
+  ![image-20221202201947892](https://ibb.co/CnmT6Pw.png)
 
   - 热门领域：自动驾驶，智能制造
   - 新冠疫情加速了这个过程
@@ -80,7 +80,7 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 
 1. 问题形成：（关注最大化利润的问题，而不是适合机器学习的问题，有些问题较难）
 2. 数据：***高质量***的数据较为稀缺，数据挖掘带来的隐私问题
-3. 模型训练：模型越来越复杂，越来越昂贵(经济学人：训练AI系统所带来的计算资源消耗呈指数级增长)![Economist_Survey](https://ibb.co/vwwQh9N)
+3. 模型训练：模型越来越复杂，越来越昂贵(经济学人：训练AI系统所带来的计算资源消耗呈指数级增长)![Economist_Survey](https://ibb.co/vwwQh9N.png)
 4. 模型部署：大计算量的模型不适合数据的实时反馈
 5. 性能监测：数据偏移（节假日用户行为出现大的变化），公平性的问题（数据带有人群的偏好性）
 
@@ -97,7 +97,7 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 
 数据科学家的时间分配（Anaconda Survey，2022）
 
-![image-20221202205923835](https://ibb.co/qpwCVy8)
+![image-20221202205923835](https://ibb.co/qpwCVy8.png)
 
 ##### 课程内容：
 
