@@ -189,7 +189,7 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 - 使用GAN（无监督的方法）生成数据  [https://thispersondoesnotexist.com](https://thispersondoesnotexist.com))
 - 数据增强（对已有的数据加入一些噪音）文本的反复翻译（英-法-英：I have no time---I don't have time）
 
-##### 总结
+##### 小结
 
 1. 找到合适的数据有时很难
 2. 原始数据 VS 学术数据
