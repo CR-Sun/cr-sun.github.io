@@ -29,7 +29,7 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 
 
 
-### 1.1课程简介
+### 1.1 课程简介
 
 ##### 课程目标
 
@@ -121,7 +121,7 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 
 
 
-### 1.2数据获取
+### 1.2 数据获取
 
 假设我们完成了1.1中将实际问题转化为机器学习问题的这一步：
 
@@ -197,3 +197,96 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 4. 数据增强是一种常见的做法
 5. 人工合成的数据逐渐占据主流（成本低、可控）
 
+### 1.3 网页数据抓取
+
+网页数据抓取的目标是从网上获取数据
+
+特点：噪音多，标号弱，数据量大，但可能有大量无用的信息
+
+例子：比较商品价格（时间轴，商家轴），大量机器学习数据集也来自数据抓取（Kinetic，ImageNet）
+
+网页爬虫 VS 数据抓取
+
+- 爬虫：索引所有互联网上的页面
+- 数据抓取：对特定的网站中的一些特定的数据感兴趣
+
+##### 数据抓取的常用工具
+
+- “curl”经常无法使用：网站管理员在使用反爬工具
+
+- 使用headless browser ：没有GUI的浏览器，使用如下代码(视频中沐神给的代码在我这里没有成功，贴上我成功的代码,同时，zillow网站现在有了反爬，视频里的例子现在无法运行，这里爬取python官网的数据)
+
+  ```python
+  from selenium import webdriver
+  import time
+  options = webdriver.ChromeOptions()
+  options.headless =  True
+  ##使用无GUI的浏览器
+  chrome = webdriver.Chrome('/Users/chengruisun/Documents/Work/2021Fall_Practical_ML/chromedriver', options = options)
+  ##下载”chromedriver“ executable文件把这里的路径替换为你chromedriver的位置
+  f = open("index.html", 'wb')
+  chrome.get('https://python.org')
+  time.sleep(2)
+  ##等待确保网页响应
+  f.write(chrome.page_source.encode('gbk', 'ignore'))
+  ##开始写入
+  print('写入成功')
+  f.close()
+  ```
+
+  还需要大量的IP防止IP检测：所有IPv4中，AWS拥有1.75%
+
+##### 数据抓取实例
+
+在zillow上抓取Stanford附近房子的销售记录：
+
+```python
+from bs4 import BeautifulSoup
+page = BeautifulSoup(open(html_path, 'r'))
+##用BeautifulSoup解析磁盘上的html文件
+links = [a['href'] for a in page.find_all('a', 'list-card-link')]
+##找出html中所有的link元素（url）
+ids = [l.split('/')[-2].split('_')[0] for l in links]
+##正则表达式匹配房子的id
+```
+
+##### 成本
+
+- 使用AWS EC2 t3.small （2GB内存，2个CPU，每小时两美分）
+  - 2GB对于浏览器来说是必要的，CPU和带宽一般不关键
+  - 可以在AWS竞价来省钱
+
+- 爬一百万个房子的价格：16.6美元
+  - 每个网页需要3秒爬取
+  - 用100台机器需要8.3个小时
+  - 额外开销包括数据储存，换IP需要重启
+
+##### 爬取图片
+
+- 获取图片的URL
+
+```python
+p = r'https:\\/\\/photos.zillowstatic.com\\/fp\\/([\d\w\-\_]+).jpg'
+ids = [a.split('-')[0] for a in re.findall(p, html)]
+urls = [f'https://photos.zillowstatic.com/fp/{id}-uncropped_scaled_within_1536_1152.jpg' for id in ids]
+```
+
+- 最大的成本在于存储
+
+##### 法律上的考虑
+
+- 网页抓取本身不是非法的
+- 但是仍然要注意
+  - 不要爬取带有敏感信息的数据
+  - 不要爬取隐私数据
+  - 不要爬取有版权的数据
+  - 遵守网页的服务条款
+
+- 如果你在以商业目的爬取数据，在行动之前咨询律师
+
+##### 小结
+
+- 在网站本身不提供数据链接的时候，数据抓取是常用的获取数据的方法
+- 如果使用公共云平台会有更低的成本
+- 记得使用审查工具来定位html中的信息
+- 最后：爬取数据一定要慎重
