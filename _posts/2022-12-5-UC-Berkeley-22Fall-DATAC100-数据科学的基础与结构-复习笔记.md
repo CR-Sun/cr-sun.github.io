@@ -225,4 +225,54 @@ elections[elections['Party'] == 'Independent'] #返回所有‘Party’为‘Ind
   Series.unique() # 返回所有不重复的值
   ```
 
-  
+
+##### 1.5 处理字符串数据
+
+如果我们想找出2020年在California最流行的男性新生儿名字，我们可以：
+
+```python
+babynames.query('Sex == "M" and Year == 2020')
+         .sort_values("Count", ascending = False)
+```
+
+如果我们想找出最长的男性新生儿名字呢？
+
+```python
+babynames.query('Sex == "M" and Year == 2020')
+         .sort_values("Name", ascending = False)
+```
+
+这行代码返回的将会是按照字母表顺序排序的数据，不是我们需要的
+
+我们可以：
+
+```python
+babynames.query('Sex == "M" and Year == 2020')
+         .sort_values("Name", key = lambda x: x.str.len(),
+                      ascending = False)
+```
+
+##### 1.6 添加，修改和移除某一行的数据
+
+如果我们没有上边的代码，我们要怎么找出最长的男性新生儿名字呢？
+
+我们可以先添加一列“姓名长度”的数据，再按照这一列排序
+
+```python
+#create a new series of only the lengths
+babyname_lengths = babynames["Name"].str.len()
+
+#add that series to the dataframe as a column
+babynames["name_lengths"] = babyname_lengths
+
+#sorting as usual
+babynames = babynames.sort_values(by = "name_lengths", ascending=False)
+```
+
+过河拆桥的时候到了，我们用完这个临时创建的列之后要怎么删除它呢？
+
+```python
+babynames = babynames.drop("name_lengths", axis = 'columns')
+```
+
+我们可以使用`.drop()`
