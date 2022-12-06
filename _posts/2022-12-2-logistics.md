@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      斯坦福21秋：实用机器学习——学习笔记1（更新至1.2数据获取）
+title:      斯坦福21秋：实用机器学习——学习笔记1（更新至1.3网页数据抓取）
 subtitle:   最好的机器学习课程之一
 date:       2022-12-2
 author:     Chengrui
@@ -221,15 +221,23 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
   import time
   options = webdriver.ChromeOptions()
   options.headless =  True
+  
   ##使用无GUI的浏览器
+  
   chrome = webdriver.Chrome('/Users/chengruisun/Documents/Work/2021Fall_Practical_ML/chromedriver', options = options)
+  
   ##下载”chromedriver“ executable文件把这里的路径替换为你chromedriver的位置
+  
   f = open("index.html", 'wb')
   chrome.get('https://python.org')
   time.sleep(2)
+  
   ##等待确保网页响应
+  
   f.write(chrome.page_source.encode('gbk', 'ignore'))
+  
   ##开始写入
+  
   print('写入成功')
   f.close()
   ```
@@ -243,10 +251,15 @@ b站的中文版课程资源：[https://space.bilibili.com/1567748478/channel/se
 ```python
 from bs4 import BeautifulSoup
 page = BeautifulSoup(open(html_path, 'r'))
+
 ##用BeautifulSoup解析磁盘上的html文件
+
 links = [a['href'] for a in page.find_all('a', 'list-card-link')]
+
 ##找出html中所有的link元素（url）
+
 ids = [l.split('/')[-2].split('_')[0] for l in links]
+
 ##正则表达式匹配房子的id
 ```
 
