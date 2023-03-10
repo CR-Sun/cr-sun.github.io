@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Neural Operator: Graph Kernel Network for Partial Differential Equations 笔记
+title:      Neural Operator: Graph Kernel Network for Partial Differential Equations
 subtitle:   论文记录，个人学习用，侵删
 date:       2023-3-11
 author:     Chengrui
@@ -88,7 +88,7 @@ tags:
 
   最大的问题：不理解对于PDE作出的优化，感觉只是把激励函数和解函数上的数据直接拿来学习，跟PDE没有关系，带来的问题：（解释性？，没有解决实质问题，对于没有PDE的问题，只能靠实验获取数据，样本量难以保证，对于复杂的非线性问题，数据成本？可解释性？复杂时变系统？）
 
-##### 
+
 
 
 
