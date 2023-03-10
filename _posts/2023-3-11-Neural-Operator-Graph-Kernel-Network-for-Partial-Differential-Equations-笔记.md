@@ -1,23 +1,18 @@
 ---
-layout:   post
-
-title:   Neural Operator: Graph Kernel Network for Partial Differential Equations 笔记
-
-subtitle:  自用学习记录，侵删
-
-date:    2023-3-11
-
-author:   Chengrui
-
-header-img: img/UC Berkeley.jpg
-
+layout:     post
+title:      Neural Operator: Graph Kernel Network for Partial Differential Equations 笔记
+subtitle:   论文记录，个人学习用，侵删
+date:       2023-3-11
+author:     Chengrui
+header-img: img/rick_blur.jpg
 catalog: true
-
 tags:
-  -数据科学
-  -论文笔记
-  -神经网络
+    - 神经网络
+    - 论文笔记
+    - GNN
 ---
+
+# Neural Operator: Graph Kernel Network for Partial Differential Equations
 
 #### 1. Introduction
 
