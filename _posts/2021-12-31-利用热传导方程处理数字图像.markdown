@@ -48,14 +48,18 @@ $$
 ###### 定义
 
 设 $f$ 是 $(-\infty,+\infty)$ 上的函数，在任意有限区间上只有有限个极值点和第一类间断点， $\int|f(x)| \mathrm{d} x<\infty$ (省略积分限代表从 $-\infty$ 到 $+\infty$ 积分，下同)，则 $f$ 的Fourier变换及其反演定义为
+
 $$
+
 \mathcal{F}\{f(x)\} \equiv \frac{1}{\sqrt{2 \pi}} \int f(x) \mathrm{e}^{-\mathrm{i} k x} \mathrm{~d} x=: F(k), k \in \mathbb{C}
 
-\$$
 $$
 
+
 $$
+
 {\mathcal{F}}^{-1}\{F(k)\} \equiv f(x)=\frac{1}{\sqrt{2 \pi}} \int F(k) \mathrm{e}^{\mathrm{i} x k} \mathrm{~d} k
+
 $$
 
 
@@ -64,36 +68,50 @@ Fourier变换具有以下常用的性质:
 
 ###### 有界性
 
-$F(k)$ 在 $(-\infty,+\infty)$ 上连续且 $\lim _{k \rightarrow \infty} F(k)=0$
+$ F(k) $ 在 $ (-\infty,+\infty) $ 上连续且 $ \lim _{k \rightarrow \infty} F(k)=0 $
 
 ###### 线性
 
 $$
+
 \mathcal{F}\{\alpha f(x)+\beta g(x)\}=\alpha F(k)+\beta G(k), \alpha, \beta \in \mathbb{C}
+
 $$
 
 ###### 微商性质
 
 $$
+
 \mathcal{F}\left\{f^{(n)}(x)\right\}=(\mathrm{i} k)^{n} \mathcal{F}\{f(x)\}
+
 $$
 
 ###### 积分性质
 
 $$
+
 \mathcal{F}\left\{\int_{-\infty}^{x} f\left(x^{\prime}\right) \mathrm{d} x^{\prime}\right\}=\frac{1}{\mathrm{i} k} \mathcal{F}\{f(x)\}=\frac{1}{\mathrm{i} k} F(k)
+
 $$
 
 ###### 卷积定理
 
 定义
+
 $$
+
 f * g(x) \equiv \frac{1}{\sqrt{2 \pi}} \int f\left(x^{\prime}\right) g\left(x-x^{\prime}\right) \mathrm{d} x^{\prime}
+
 $$
+
 为 $f, g$ 的卷积，则
+
 $$
+
 \mathcal{F}\{f * g\}=F(k) G(k)
+
 $$
+
 下面我们利用上面的知识先求解高斯函数的Fourier变换。
 
 ##### 高斯函数
