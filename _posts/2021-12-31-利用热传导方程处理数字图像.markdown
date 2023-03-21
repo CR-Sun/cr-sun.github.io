@@ -120,6 +120,7 @@ $$
 ##### 高斯函数
 
 高斯函数（Gaussian function）定义为
+
 $$
 
 g(x)=\mathrm{e}^{-\frac{a}{2} x^{2}}(a>0)
