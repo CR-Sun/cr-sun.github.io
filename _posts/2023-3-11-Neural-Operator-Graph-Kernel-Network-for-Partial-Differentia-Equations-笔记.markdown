@@ -4,7 +4,7 @@ title:      Neural Operator -- Graph Kernel Network for Partial Differential Equ
 subtitle:   论文记录，个人学习用，侵删
 date:       2023-3-11
 author:     Chengrui
-header-img: img/rick_blur.jpg
+header-img: img/gnn.jpg
 catalog: true
 tags:
     - 神经网络
