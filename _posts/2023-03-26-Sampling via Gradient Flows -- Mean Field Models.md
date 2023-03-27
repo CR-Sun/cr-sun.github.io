@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Sampling via Gradient Flows: Mean Field Models
+title:      Sampling via Gradient Flows -- Mean Field Models
 subtitle:   论文记录，个人学习用，侵删
 date:       2023-3-26
 author:     Chengrui
