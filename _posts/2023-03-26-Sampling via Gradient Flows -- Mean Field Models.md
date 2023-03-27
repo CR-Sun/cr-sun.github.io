@@ -7,25 +7,24 @@ author:     Chengrui
 header-img: img/gnn.jpg
 catalog: true
 tags:
-    - CFD
+    - 计算流体力学
     - 论文笔记
-    - Reinforcement Learning
+    - 强化学习
 ---
 
 
 
 ## Sampling via Gradient Flows: Mean Field Models
 
-```
-2. Authors: Zhengyu Huang, Maxime Herlands, Youssef Mroueh, Alan Willsky
+1. Authors: Zhengyu Huang, Maxime Herlands, Youssef Mroueh, Alan Willsky
 
-3. Affiliation: 麻省理工学院
+2. Affiliation: 麻省理工学院
 
-4. Keywords: Reinforcement learning, gradient flows, sampling, mean-field models
+3. Keywords: Reinforcement learning, gradient flows, sampling, mean-field models
 
-5. Urls: https://arxiv.org/abs/1906.05826, Github: None
+4. Urls: https://arxiv.org/abs/1906.05826, Github: None
 
-6. Summary:
+5. Summary:
 
    - (1):该文介绍了概率分布的一种新的建模和采样方法。
 
@@ -34,9 +33,6 @@ tags:
    - (3):该文提出了一种采样方法，通过建立梯度流动模型，结合均值场模型，模拟分布的状态。通过分析重要性权重进行分布采样。该方法在采样复杂的分布上表现良好。
 
    - (4):该方法在各种不同的后验概率分布的任务上进行了测试，并获得了非常好的效果。 该方法达到了他们的目标并且性能支持他们的论点。
-```
-
-
 
 
 
